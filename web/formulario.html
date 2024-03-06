@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <img src="./assets/img/cookie.png" id="logo" alt="Logo de galleta mordida">
+        <nav>
+            <ul>
+                <li class="elementos_navegacion"><a href="./index.html" target="_blank">Inicio</a></li>
+                <li class="elementos_navegacion"><a href="./nosotros.html">Nosotros</a></li>
+                <li class="elementos_navegacion"><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>¡Haz tu pedido!</h1>
+        <form action="https://formsubmit.co/jorge.e.sala@gmail.com" method="POST">
+            <fieldset id="datos-basicos">
+                <legend> Datos básicos</legend>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Blanca" required>
+
+                <label for="email">Correo: </label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@correo.com" required>
+
+                <label for="telefono">Número de teléfono </label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="55519191023">
+            </fieldset>
+            <fieldset id="datos-pedido">
+                <legend>Datos del pedido</legend>
+                <label for="postre">
+                    ¿Qué tipo de postre necesitas?
+                </label>
+                <select name="postre"
+                    id="postre"><!-- Opciones desplegables, hace que tu usuario haga sroll infinito hasta encontrar la opción deseada -->
+                    <option value="Galletas">Galletas</option>
+                    <option value="Pasteles">Pasteles</option>
+                    <option value="Brownies">Brownies</option>
+                    <option value="Arroz con leche">Arroz con leche</option>
+                </select>
+
+
+
+                <!-- <input name="postre-2" list="opciones-postre-2">
+                <datalist id="opciones-postre-2">
+                    <option value="Galletas"></option>
+                    <option value="Pasteles"></option>
+                    <option value="Brownies"></option>
+                    <option value="Arroz con leche"></option>
+                </datalist>
+                <br> -->
+                <label for="cantidad">¿Cuántas unidades necesitas? </label>
+                <input type="number" id="cantidad" name="cantidad" min="6" max="100" required>
+
+                <label for="fecha">
+                    Fecha del evento: </label>
+                <input type="date" name="fecha" id="fecha">
+
+
+            </fieldset>
+            <fieldset id="datos-envio">
+                <legend>Datos del envío</legend><!-- Seleccionar una opción, pero se pueden seleccionar todas-->
+                <label for="sucursal">Recoger en sucursal: </label>
+                <input type="radio" name="" id="sucursal">
+
+                <label for="envio">Envío a domicilio: </label>
+                <input type="radio" name="" id="envio">
+
+                <label for="entrega">Punto de entrega:</label>
+                <input type="radio" name="" id="entrega">
+
+            </fieldset>
+
+            <label class="terminos" for="terminos">Acepto términos y condiciones</label>
+                <input id="terminos" type="checkbox">
+
+                <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

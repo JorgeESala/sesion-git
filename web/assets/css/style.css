@@ -1,0 +1,32 @@
+#titulo{
+    color:aquamarine;
+}
+#titulo{
+    color: palevioletred;
+}
+h1{
+    color: cornflowerblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1.encabezado{
+    color:crimson;
+}
+h1{
+    color: coral;
+}
+body{
+    background-color: cornflowerblue;
+    color: white;
+}
+table{
+    border: 4px solid darkred; /* width style y color del borde */
+    border-spacing: 15px;/* Espacio entre celdas */
+}
+th,td{
+    border: 1px dashed darkred;
+    background-color: orange;
+}
+td{
+    background-color: coral;
+    text-align: center;
+}

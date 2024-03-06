@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color_texto:#5c3d5b;
+    --color_elementos_fieldset:#4d3e6b;
+    --color_fieldset_boton:#f07360;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+#logo{
+    width: 100px;
+    height: auto;
+    margin: 20px 25px 20px 15px;
+}
+
+nav>ul{
+    list-style-type: none; /* Elimina los marcadores de lista */
+    display: flex;
+}
+.elementos_navegacion{
+    margin: 20px 50px;
+    font-size: 1.3em;
+    font-family: "Roboto", sans-serif; /* Fuente tomada de google fonts */
+    font-weight: 700;
+    font-style: normal;
+    
+}
+.elementos_navegacion a{
+    text-decoration: none; /* Elimina el subrayado de a*/
+    color: var(--color_texto); /*Cambia el color al valor de una variable */
+}
+.elementos_navegacion a:hover{ /* hover se activa al poner el cursor sobre a */
+    color: #f07360;
+    text-decoration: underline overline;
+}
+h1{
+    color: var(--color_texto);
+    text-align: center;
+}
+form{
+    margin: 0 auto;
+    width: 70%;
+    font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+
+    /* Fuente horrible
+    font-family: "Micro 5", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+    text-align: center; */
+
+}
+fieldset{
+    border-color: var(--color_fieldset_boton);
+    border-radius: 1.2em;
+    color: var(--color_elementos_fieldset);
+    margin: 20px;
+    
+}
+legend{
+    text-align: left;
+    font-size: 1.6em;
+}
+legend::first-letter{
+    color: var(--color_fieldset_boton);
+}
+#datos-basicos,
+#datos-pedido,
+#datos-envio{
+    padding: 30px 50px;
+}
+
+#datos-basicos label,
+#datos-pedido label{
+    display: block; /* Vuelve las etiquetas en bloques para no usar br */
+}
+
+#datos-basicos input,
+#datos-pedido input{
+    border: 3px solid var(--color_elementos_fieldset);
+    width: 200px;
+    height: 30px;
+}
+
+/* Estilos a campos de entrada cuando estén enfocados */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus{
+    outline: none;
+    box-shadow: 5px 3px var(--color_elementos_fieldset);
+}
+#datos-pedido select[name="postre"]{
+    width: 200px;
+    height: 30px;
+    border: 3px solid var(--color_elementos_fieldset);
+}
+#datos-envio label{
+    display: inline-block;
+    margin: 4px;
+    padding: 2px;
+}
+
+.terminos{
+    margin: 20px;
+    color: var(--color_elementos_fieldset);
+    float: left;
+}
+
+button[type="submit"]{
+    width: 120px;
+    height: 20px;
+    float: right;
+    color: var(--color_elementos_fieldset);
+    background-color: var(--color_fieldset_boton);
+    border: 2px solid var(--color_elementos_fieldset);
+}
+button:active{
+    transform: scale(0.90);
+}
